@@ -13,4 +13,10 @@ app.router.get('/', function () {
   this.res.json({"hello": "eugene"});
 });
 
+app.router.get('/test', function () {
+  this.writeHead(200, {'Content-type':
+  'text/html'});
+  this.res.end('<b>hello</b>'));
+});
+
 app.start(3000, function () { console.log({"flatiron": "ok"}); });
