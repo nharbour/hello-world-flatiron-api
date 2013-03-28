@@ -14,7 +14,8 @@ app.router.get('/', function () {
 });
 
 app.router.get('/test', function () {
-  this.res.json({"hello": "bob"});
+  this.res.writeHead(200, { 'Content-Type': 'text/plain' })
+  this.res.end('flatiron ' + flatiron.version);
 });
 
 app.start(3000, function () { console.log({"flatiron": "ok"}); });
